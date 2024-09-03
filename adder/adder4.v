@@ -1,6 +1,6 @@
 `timescale 10ns/1ns
 
-module fulladder_4( X,Y,C,Sum,clk1); 
+module ripplefullhalfadder_4( X,Y,C,Sum,clk1); 
     input[3:0] X,Y;
     output  [3:0] Sum;
     output  C;
