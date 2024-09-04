@@ -1,0 +1,107 @@
+/*
+卡诺图
+canonical form
+相邻的可以合并成一项
+
+X2X1	00	01	11	10
+X3				
+0			1	1
+1		1	1	
+				
+				
+				
+				
+	F1=~X3X2X1+(~X3)X2(~X1)=~X3X2			
+	F2=X3(~X2)X1+X3X2X1=X3X1			
+	F=F1+F2			
+*/
+
+module top_module( 
+    input x3,
+    input x2,
+    input x1,  // three inputs
+    output f   // one output
+);
+    //assign f = (x2&x1)|(x3&x1)|(~x3&x2);
+    assign f = (x3&x1)|(~x3&x2);
+endmodule
+
+/*
+X1X0	00	01	11	10
+X3X2				
+00		1			
+01			1		
+11				1	
+10					1
+				
+				
+	F=(~X3~X2~X1~X0)+(~X3X2~X1X0)+(X3X2X1X0)+X3~X2X1~X0			
+
+*/
+
+module top_module ( input [1:0] A, input [1:0] B, output z ); 
+
+    assign z=((~A[1])&(~A[0])&(~B[1])&(~B[0]))|((~A[1])&(A[0])&(~B[1])&(B[0]))|
+        ((A[1])&(~A[0])&(B[1])&(~B[0]))|((A[1])&(A[0])&(B[1])&(B[0]));
+endmodule
+
+
+
+/*
+端口接地或者电源等不会发生变化的情况
+*/
+module top_module (
+    output out);
+    reg x;
+    
+	assign out = x&~x;
+endmodule
+
+
+/*
+已知给出如下bcd 4位加法模块定义如下
+module bcd_fadd (
+    input [3:0] a,
+    input [3:0] b,
+    input     cin,
+    output   cout,
+    output [3:0] sum );
+
+要求计算的数据如下
+module top_module( 
+    input [399:0] a, b,
+    input cin,
+    output cout,
+    output [399:0] sum );
+
+解决：
+1 使用generate 相关的语句实现。以避免写100个实例化的语句
+2 generate for 
+begin后面接 : 然后是label定义
+定义模块不用使用实例化的写法，如声明一般，输入直接写带入计算的端口定义，输出要确保每个实例化的输出端不能连在一起，如本例子中，需要增加cinbuf【100】
+coutbuf【99】
+3 除了第2点，cinbuf coutbuf等操作，可以使用always
+
+*/
+module top_module( 
+    input [399:0] a, b,
+    input cin,
+    output cout,
+    output [399:0] sum );
+
+    reg [100:0] cinbuf;
+    reg [99:0] coutbuf;
+	genvar i;   
+    always @ (*) begin
+        cinbuf[0] = cin;
+    end
+    generate for (i=0; i<397; i=i+4 ) begin: bcd
+        bcd_fadd bh(a[i+3:i],b[i+3:i],cinbuf[i/4+i%4],coutbuf[i/4+i%4],sum[i+3:i]);
+        always @ (*) begin
+            cinbuf[i/4+i%4+1] = coutbuf[i/4+i%4];
+        end
+                        end
+                        endgenerate
+//      end
+    assign cout = coutbuf[99];                  
+endmodule
