@@ -7,7 +7,7 @@ module ripplefullfadder_x #(
     input [chainnumber-1:0] Y,
     input  Carryin, 
     output Carryout,
-    output [chainnumber-1:0] Sum,
+    output [chainnumber:0] Sum,
     input clk1
 ); 
     reg [chainnumber-1:0] Xreg,Yreg,Sumreg;
@@ -28,6 +28,6 @@ module ripplefullfadder_x #(
             end
         end
     endgenerate
-    assign  Carryout = Carryinreg[chainnumber-1];
+    assign  Carryout = Carryinreg[chainnumber];
     assign  Sum = Sumreg;
 endmodule
