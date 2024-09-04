@@ -1,6 +1,7 @@
 `timescale 10ns/1ns
 module top_module ();
 //clk define and start
+    parameter maxsize = 10;
 	reg clk=0;
 	always #5 clk = ~clk;  // Create clock with period=10
 	initial `probe_start;   // Start the timing diagram
@@ -8,52 +9,52 @@ module top_module ();
 	`probe(clk);        // Probe signal "clk"
 
 
-    reg [3:0] a, b, a1, b1;
+    reg [maxsize-1:0] a, b, a1, b1;
 
     wire  c, c1;
-    wire [3:0] sum, sum1;
+    wire [maxsize-1:0] sum, sum1;
 
 initial begin
  	
-    a = 4'h3;
-    b = 4'h2;
+    a = 8'd255;
+    b = 8'd255;
     a1 = a+1;
     b1 = b+1;
-    #5 a = 4'd7;
-    b = 4'd8;
+    #5 a = 8'd27;
+    b = 8'd48;
     a1 = a+1;
     b1 = b+1;    
-    #5 a = 4'd9;
-    b = 4'd10;
+    #5 a = 8'd59;
+    b = 8'd100;
     a1 = a+1;
     b1 = b+1;        
-    #5 a = 4'd15;
-    b = 4'd15; 
+    #5 a = 8'd150;
+    b = 8'd150; 
     a1 = a+1;
     b1 = b+1;    
     #5
-    a = 4'd0;
-    b = 4'd15;
+    a = 8'd99;
+    b = 8'd150;
     a1 = a+1;
     b1 = b+1;    
-    #5 a = 4'd7;
-    b = 4'd1;
+    #5 a = 8'd7;
+    b = 8'd199;
     a1 = a+1;
     b1 = b+1;    
-    #5 a = 4'd3;
-    b = 4'd10;
+    #5 a = 8'd3;
+    b = 8'd102;
     a1 = a+1;
     b1 = b+1;    
-    #5 a = 4'd7;
-    b = 4'd15; 
+    #5 a = 8'd7;
+    b = 8'd153; 
     a1 = a+1;
     b1 = b+1;    
-    #5 a = 4'd7;
-    b = 4'd12;
+    #5 a = 8'd77;
+    b = 8'd128;
     a1 = a+1;
     b1 = b+1;    
-    #5 a = 4'd11;
-    b = 4'd15; 
+    #5 a = 8'd116;
+    b = 8'd153; 
     a1 = a+1;
     b1 = b+1;
         
@@ -61,12 +62,15 @@ initial begin
     #5 $finish;            // Quit the simulation
 end
 
-    ripplefullhalfadder_4 ex(.X(a),.Y(b),.C(c),.Sum(sum),.clk1(clk));
+//    ripplefullhalfadder_4 ex(.X(a),.Y(b),.C(c),.Sum(sum),.clk1(clk));
+
+    ripplefullfadder_x ex1(.X(a),.Y(b),.Carryin(1'b0),.Carryout(c),.Sum(sum),.clk1(clk));
     `probe(a);
     `probe(b);
     `probe(c);
     `probe(sum);
-    ripplefullhalfadder_4 ex1(.X(a1),.Y(b1),.C(c1),.Sum(sum1),.clk1(clk));
+
+    ripplefullfadder_x #(.chainnumber(9)) ex2(.X(a1),.Y(b1),.Carryin(1'b0),.Carryout(c1),.Sum(sum1),.clk1(clk));
     `probe(a1);
     `probe(b1);
     `probe(c1);
@@ -74,6 +78,39 @@ end
 
 endmodule
 
+`timescale 1ns/1ns
+
+module ripplefullfadder_x #(
+    parameter chainnumber = 8
+) (
+    input [chainnumber-1:0 ] X,
+    input [chainnumber-1:0] Y,
+    input  Carryin, 
+    output Carryout,
+    output [chainnumber-1:0] Sum,
+    input clk1
+); 
+    reg [chainnumber-1:0] Xreg,Yreg,Sumreg;
+    reg [chainnumber:0] Carryinreg;
+    reg [chainnumber:0] Carryoutreg;
+
+    always @(*) begin
+        Xreg = X;
+        Yreg = Y;
+        Carryinreg[0] = Carryin;
+    end
+    genvar i;
+    generate
+        for ( i=0; i<chainnumber; i=i+1) begin:label
+            fulladder_1 fx(X[i],Y[i],Carryinreg[i],Carryoutreg[i],Sumreg[i],clk1);
+            always @(*) begin
+                Carryinreg[i+1] = Carryoutreg[i];
+            end
+        end
+    endgenerate
+    assign  Carryout = Carryinreg[chainnumber];
+    assign  Sum = Sumreg;
+endmodule
 
 module ripplefullhalfadder_4( X,Y,C,Sum,clk1); 
     input [3:0] X;
