@@ -7,12 +7,12 @@ module ripplefullfadder_x #(
     input [chainnumber-1:0] Y,
     input  Carryin, 
     output Carryout,
-    output [chainnumber:0] Sum,
+    output [chainnumber-1:0] Sum,
     input clk1
 ); 
     reg [chainnumber-1:0] Xreg,Yreg,Sumreg;
     reg [chainnumber:0] Carryinreg;
-    reg [chainnumber-1:0] Carryoutreg;
+    reg [chainnumber:0] Carryoutreg;
 
     always @(*) begin
         Xreg = X;
