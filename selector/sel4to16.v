@@ -28,7 +28,7 @@ module sel4to16 (
     reg [limit-1:0] Selreg;
     reg [limit*4-1:0] Pathreg;
 
-    reg [limit*2-1:0] PathBuff;
+    wire [limit*2-1:0] PathBuff;
 	 always @ (*) begin
 		Selreg = select;
 	 end

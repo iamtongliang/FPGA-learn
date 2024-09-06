@@ -58,7 +58,7 @@ module sel3to8 (
     reg [limit-1:0] Selreg;
     reg [7:0] Pathreg;
 
-    reg [7:0] PathBuff;
+    wire [7:0] PathBuff;
 
     assign Selreg = select;
     sel2to4 se1(.select(Selreg[1:0]), .path(PathBuff[3:0]), .clk1(clk1));
