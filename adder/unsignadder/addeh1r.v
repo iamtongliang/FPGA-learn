@@ -2,16 +2,15 @@
 
 module halfadder_1(X,Y,C,Sum,clk1);
     input X,Y;
-    output reg C;
-    output reg Sum;
+    output  C;
+    output  Sum;
     input clk1;
 
     reg [1:0] buff;
-    reg Xreg, Yreg;
-    initial begin
-        assign Xreg = X;
-        assign Yreg = Y;
-        end
+    wire Xreg, Yreg;
+
+    assign Xreg = X;
+    assign Yreg = Y;
     always @ (*) begin
             buff[0] = Xreg^Yreg;
             buff[1] = Xreg&Yreg;

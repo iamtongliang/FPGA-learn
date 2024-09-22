@@ -1,4 +1,5 @@
-`timescale 1ns/1ns
+
+`include "/home/liang-tong/learn/lang/verilog/adder/unsignadder/adderf1.v"
 
 module ripplefullfadder_x #(
     parameter chainnumber = 8
@@ -10,10 +11,11 @@ module ripplefullfadder_x #(
     output [chainnumber-1:0] Sum,
     input clk1
 ); 
-    reg [chainnumber-1:0] Xreg,Yreg,Sumreg;
+    reg [chainnumber-1:0] Xreg,Yreg;
+    wire [chainnumber-1:0] Sumreg;
     reg [chainnumber:0] Carryinreg;
-    reg [chainnumber:0] Carryoutreg;
-
+    wire [chainnumber:0] Carryoutreg;
+    
     always @(*) begin
         Xreg = X;
         Yreg = Y;

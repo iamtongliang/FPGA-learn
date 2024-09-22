@@ -1,12 +1,15 @@
 `timescale 10ns/1ns
 
+//`include "/home/liang-tong/learn/lang/verilog/adder/unsignadder/addeh1r.v"
+//`include "/home/liang-tong/learn/lang/verilog/adder/unsignadder/adderf1.v"
+
 module ripplefullhalfadder_4( X,Y,C,Sum,clk1); 
     input[3:0] X,Y;
     output  [3:0] Sum;
     output  C;
 	input clk1;
 
-    reg [3:0] Cin;
+    wire [3:0] Cin;
 
     halfadder_1 h1(
         .X(X[0]),

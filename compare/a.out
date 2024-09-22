@@ -1,0 +1,40 @@
+#! /usr/bin/vvp
+:ivl_version "12.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 9;
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/system.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/v2005_math.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/va_math.vpi";
+S_0x55a762427490 .scope module, "cmp1bit" "cmp1bit" 2 3;
+ .timescale -8 -9;
+    .port_info 0 /INPUT 1 "A";
+    .port_info 1 /INPUT 1 "B";
+    .port_info 2 /OUTPUT 1 "equal";
+    .port_info 3 /OUTPUT 1 "more";
+    .port_info 4 /OUTPUT 1 "less";
+    .port_info 5 /INPUT 1 "clock";
+o0x7baa3d098018 .functor BUFZ 1, C4<z>; HiZ drive
+o0x7baa3d098048 .functor BUFZ 1, C4<z>; HiZ drive
+L_0x55a762470230 .functor XOR 1, o0x7baa3d098018, o0x7baa3d098048, C4<0>, C4<0>;
+L_0x55a762470320 .functor NOT 1, L_0x55a762470230, C4<0>, C4<0>, C4<0>;
+L_0x55a7624703c0 .functor NOT 1, L_0x55a762470320, C4<0>, C4<0>, C4<0>;
+L_0x55a762470480 .functor AND 1, o0x7baa3d098018, L_0x55a7624703c0, C4<1>, C4<1>;
+L_0x55a7624705c0 .functor NOT 1, L_0x55a762470320, C4<0>, C4<0>, C4<0>;
+L_0x55a762470630 .functor AND 1, o0x7baa3d098048, L_0x55a7624705c0, C4<1>, C4<1>;
+v0x55a7624276c0_0 .net "A", 0 0, o0x7baa3d098018;  0 drivers
+v0x55a76246fae0_0 .net "B", 0 0, o0x7baa3d098048;  0 drivers
+v0x55a76246fba0_0 .net *"_ivl_0", 0 0, L_0x55a762470230;  1 drivers
+v0x55a76246fc60_0 .net *"_ivl_4", 0 0, L_0x55a7624703c0;  1 drivers
+v0x55a76246fd40_0 .net *"_ivl_8", 0 0, L_0x55a7624705c0;  1 drivers
+o0x7baa3d098108 .functor BUFZ 1, C4<z>; HiZ drive
+v0x55a76246fe70_0 .net "clock", 0 0, o0x7baa3d098108;  0 drivers
+v0x55a76246ff30_0 .net "equal", 0 0, L_0x55a762470320;  1 drivers
+v0x55a76246fff0_0 .net "less", 0 0, L_0x55a762470630;  1 drivers
+v0x55a7624700b0_0 .net "more", 0 0, L_0x55a762470480;  1 drivers
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "/home/liang-tong/learn/lang/verilog/compare/cmp1bit.v";
