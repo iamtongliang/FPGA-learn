@@ -1,4 +1,5 @@
-`timescale 10ns/1ns
+//`timescale 10ns/1ns
+`include "cmp1bit.v"
 
 module cmp2bit( A, B, equal, more, less);
 	parameter datalength = 2;

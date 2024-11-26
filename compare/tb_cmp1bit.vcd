@@ -1,0 +1,85 @@
+$date
+	Mon Oct  7 18:13:39 2024
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module tb_cmp1bit $end
+$var wire 1 ! less $end
+$var wire 1 " great $end
+$var wire 1 # equal $end
+$var parameter 32 $ CLK_PERIOD $end
+$var reg 1 % Ain $end
+$var reg 1 & Bin $end
+$var reg 1 ' clk $end
+$var reg 1 ( rst_n $end
+$scope module cmp1 $end
+$var wire 1 % A $end
+$var wire 1 & B $end
+$var wire 1 ' clock $end
+$var wire 1 # equal $end
+$var wire 1 ! less $end
+$var wire 1 " more $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b1010 $
+$end
+#0
+$dumpvars
+x(
+x'
+x&
+x%
+x#
+x"
+x!
+$end
+#11
+1(
+#21
+0'
+1(
+#25
+1'
+#30
+0'
+#35
+1#
+0!
+0"
+1'
+0&
+0%
+#40
+0'
+#45
+1!
+0#
+1'
+1&
+#50
+0'
+#55
+0!
+1"
+1'
+0&
+1%
+#60
+0'
+#65
+0"
+1#
+0!
+1'
+1&
+#70
+0'
+#75
+1'

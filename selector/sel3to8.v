@@ -1,4 +1,4 @@
-`timescale 10ns/1ns
+//`timescale 10ns/1ns
 /*
 Path    Sel
 0       000
@@ -10,6 +10,7 @@ Path    Sel
 6       110
 7       111
 */
+`include "sel2to4.v"
 
 module sel3to8 (
     input [2:0] select,

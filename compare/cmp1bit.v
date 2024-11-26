@@ -1,4 +1,4 @@
-`timescale 10ns/1ns
+//`timescale 10ns/1ns
 
 module cmp1bit( A, B, equal, more, less, clock);
 	input A, B;

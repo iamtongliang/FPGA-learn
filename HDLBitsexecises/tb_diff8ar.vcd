@@ -1,0 +1,170 @@
+$date
+	Tue Nov 26 20:27:50 2024
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module tb_diff8ar $end
+$var wire 8 ! y [7:0] $end
+$var parameter 32 " CLK_PERIOD $end
+$var reg 1 # clk $end
+$var reg 8 $ d [7:0] $end
+$var reg 1 % reset $end
+$scope module dut $end
+$var wire 1 % areset $end
+$var wire 1 # clk $end
+$var wire 8 & d [7:0] $end
+$var wire 8 ' q [7:0] $end
+$var reg 8 ( q1 [7:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b1010 "
+$end
+#0
+$dumpvars
+b0 (
+b0 '
+bx &
+1%
+bx $
+0#
+b0 !
+$end
+#5
+1#
+#10
+b100100 $
+b100100 &
+0#
+#15
+1#
+#20
+0#
+#25
+1#
+#30
+0#
+0%
+#35
+b100100 !
+b100100 '
+b100100 (
+1#
+#40
+0#
+#45
+1#
+#50
+0#
+#55
+1#
+#60
+b0 !
+b0 '
+b0 (
+0#
+1%
+#65
+1#
+#70
+0#
+#75
+1#
+#80
+0#
+0%
+#85
+b10000001 !
+b10000001 '
+b10000001 (
+1#
+b10000001 $
+b10000001 &
+#90
+0#
+#95
+b1001 !
+b1001 '
+b1001 (
+1#
+b1001 $
+b1001 &
+#100
+0#
+#105
+b1100011 !
+b1100011 '
+b1100011 (
+1#
+b1100011 $
+b1100011 &
+#110
+0#
+#115
+b1101 !
+b1101 '
+b1101 (
+1#
+b1101 $
+b1101 &
+#120
+0#
+#125
+b10001101 !
+b10001101 '
+b10001101 (
+1#
+b10001101 $
+b10001101 &
+#130
+0#
+#135
+b1100101 !
+b1100101 '
+b1100101 (
+1#
+b1100101 $
+b1100101 &
+#140
+0#
+#145
+b0 !
+b0 '
+b0 (
+1#
+b10010 $
+b10010 &
+1%
+#150
+0#
+0%
+#155
+b1 !
+b1 '
+b1 (
+1#
+b1 $
+b1 &
+#160
+0#
+#165
+b1101 !
+b1101 '
+b1101 (
+1#
+b1101 $
+b1101 &
+#170
+0#
+#175
+1#
+#180
+0#
+#185
+1#
