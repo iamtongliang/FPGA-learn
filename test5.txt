@@ -1,0 +1,120 @@
+2x 1050 = 3 x 700 and I(0) is the same 
+2x 1053 = 3 x 702 and I(0) is the same 
+2x 1056 = 3 x 704 and I(0) is the same 
+2x 1059 = 3 x 706 and I(0) is the same 
+2x 1062 = 3 x 708 and I(0) is the same 
+2x 1230 = 3 x 820 and I(2) is the same 
+2x 1233 = 3 x 822 and I(2) is the same 
+2x 1236 = 3 x 824 and I(2) is the same 
+2x 1239 = 3 x 826 and I(2) is the same 
+2x 1242 = 3 x 828 and I(2) is the same 
+2x 1395 = 3 x 930 and I(3) is the same 
+2x 1398 = 3 x 932 and I(3) is the same 
+2x 1410 = 3 x 940 and I(4) is the same 
+2x 1413 = 3 x 942 and I(4) is the same 
+2x 1416 = 3 x 944 and I(4) is the same 
+2x 1419 = 3 x 946 and I(4) is the same 
+2x 1422 = 3 x 948 and I(4) is the same 
+Count: 17
+Count: 0
+Count: 0
+NINE is 1410 and SIX is 940 and I(4) is the same 
+NINE is 1413 and SIX is 942 and I(4) is the same 
+NINE is 1416 and SIX is 944 and I(4) is the same 
+NINE is 1419 and SIX is 946 and I(4) is the same 
+Count: 4
+NINE is 1410 and SIX is 940 and I(4) is the same 
+NINE is 1413 and SIX is 942 and I(4) is the same 
+NINE is 1416 and SIX is 944 and I(4) is the same 
+NINE is 1419 and SIX is 946 and I(4) is the same 
+Count: 4
+NINE is 1410 and SIX is 940 and I(4) is the same 
+NINE is 1413 and SIX is 942 and I(4) is the same 
+NINE is 1416 and SIX is 944 and I(4) is the same 
+NINE is 1419 and SIX is 946 and I(4) is the same 
+Count: 4
+NINE is 1410 and SIX is 940 and I(4) is the same 
+NINE is 1413 and SIX is 942 and I(4) is the same 
+NINE is 1416 and SIX is 944 and I(4) is the same 
+NINE is 1419 and SIX is 946 and I(4) is the same 
+Count: 4
+NINE is 1410 and SIX is 940 and I(4) is the same 
+NINE is 1413 and SIX is 942 and I(4) is the same 
+NINE is 1416 and SIX is 944 and I(4) is the same 
+NINE is 1419 and SIX is 946 and I(4) is the same 
+Count: 4
+NINE is 1410 and SIX is 940 and I(4) is the same 
+NINE is 1413 and SIX is 942 and I(4) is the same 
+NINE is 1416 and SIX is 944 and I(4) is the same 
+NINE is 1419 and SIX is 946 and I(4) is the same 
+Count: 4
+NINE is 1410 and SIX is 940 and I(4) is the same 
+NINE is 1413 and SIX is 942 and I(4) is the same 
+NINE is 1416 and SIX is 944 and I(4) is the same 
+NINE is 1419 and SIX is 946 and I(4) is the same 
+Count: 4
+NINE is 1410 and SIX is 940 and I(4) is the same 
+NINE is 1413 and SIX is 942 and I(4) is the same 
+NINE is 1416 and SIX is 944 and I(4) is the same 
+NINE is 1419 and SIX is 946 and I(4) is the same 
+Count: 4
+NINE is 1410 and SIX is 940 and I(4) is the same 
+NINE is 1413 and SIX is 942 and I(4) is the same 
+NINE is 1416 and SIX is 944 and I(4) is the same 
+NINE is 1419 and SIX is 946 and I(4) is the same 
+Count: 4
+NINE is 1410 and SIX is 940 and I(4) is the same 
+NINE is 1413 and SIX is 942 and I(4) is the same 
+NINE is 1416 and SIX is 944 and I(4) is the same 
+NINE is 1419 and SIX is 946 and I(4) is the same 
+Count: 4
+NINE is 1410 and SIX is 940 and I(4) is the same 
+NINE is 1413 and SIX is 942 and I(4) is the same 
+NINE is 1416 and SIX is 944 and I(4) is the same 
+NINE is 1419 and SIX is 946 and I(4) is the same 
+Count: 4
+NINE is 1410 and SIX is 940 and I(4) is the same 
+NINE is 1413 and SIX is 942 and I(4) is the same 
+NINE is 1416 and SIX is 944 and I(4) is the same 
+NINE is 1419 and SIX is 946 and I(4) is the same 
+Count: 4
+NINE is 1410 and SIX is 940 and I(4) is the same 
+NINE is 1413 and SIX is 942 and I(4) is the same 
+NINE is 1416 and SIX is 944 and I(4) is the same 
+NINE is 1419 and SIX is 946 and I(4) is the same 
+Count: 4
+NINE is 1410 and SIX is 940 and I(4) is the same 
+NINE is 1413 and SIX is 942 and I(4) is the same 
+NINE is 1416 and SIX is 944 and I(4) is the same 
+NINE is 1419 and SIX is 946 and I(4) is the same 
+Count: 4
+NINE is 1410 and SIX is 940 and I(4) is the same 
+NINE is 1413 and SIX is 942 and I(4) is the same 
+NINE is 1416 and SIX is 944 and I(4) is the same 
+NINE is 1419 and SIX is 946 and I(4) is the same 
+Count: 4
+NINE is 1410 and SIX is 940 and I(4) is the same 
+NINE is 1413 and SIX is 942 and I(4) is the same 
+NINE is 1416 and SIX is 944 and I(4) is the same 
+NINE is 1419 and SIX is 946 and I(4) is the same 
+Count: 4
+NINE is 1410 and SIX is 940 and I(4) is the same 
+NINE is 1413 and SIX is 942 and I(4) is the same 
+NINE is 1416 and SIX is 944 and I(4) is the same 
+NINE is 1419 and SIX is 946 and I(4) is the same 
+Count: 4
+NINE is 1410 and SIX is 940 and I(4) is the same 
+NINE is 1413 and SIX is 942 and I(4) is the same 
+NINE is 1416 and SIX is 944 and I(4) is the same 
+NINE is 1419 and SIX is 946 and I(4) is the same 
+Count: 4
+NINE is 1410 and SIX is 940 and I(4) is the same 
+NINE is 1413 and SIX is 942 and I(4) is the same 
+NINE is 1416 and SIX is 944 and I(4) is the same 
+NINE is 1419 and SIX is 946 and I(4) is the same 
+Count: 4
+NINE is 1410 and SIX is 940 and I(4) is the same 
+NINE is 1413 and SIX is 942 and I(4) is the same 
+NINE is 1416 and SIX is 944 and I(4) is the same 
+NINE is 1419 and SIX is 946 and I(4) is the same 
+Count: 4
